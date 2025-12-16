@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Hero(){
     return(
-        <div className="flex flex-col items-center justify-center w-full px-8">
+        <div className="flex flex-col items-center justify-center w-full ">
 
-        <div className="flex flex-col w-2/3 text-center text-8xl">
+        <div className="flex flex-col w-2/3 text-center text-8xl m-16">
             <h1 className="flex justify-between w-full">
                 <span>ABOUT</span>
                 <span>THE</span>

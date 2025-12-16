@@ -7,10 +7,12 @@ export default function Home() {
   return (
     <div>
       <Nav />
-      <Carousel />
-      <Hero />
-      <Contact />
-      <Footer />
+      <div className="pt-24">
+        <Carousel />
+        <Hero />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }

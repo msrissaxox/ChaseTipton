@@ -40,8 +40,8 @@ export default function Carousel() {
 
     return (
         <div className="w-full py-8 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4">
-                <div className="grid grid-cols-4 gap-4">
+            <div className="w-full">
+                <div className="grid grid-cols-4 gap-2">
                     {getVisibleImages().map((image, index) => (
                         <div
                             key={`${image.id}-${index}`}

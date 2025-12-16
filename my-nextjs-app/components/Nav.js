@@ -3,9 +3,9 @@ import Divider from '@mui/material/Divider';
 
 export default function Nav(){
     return(
-        <div className="fixed top-0 w-full z-50">
+        <div className="fixed top-0 w-full z-50 py-8" style={{ backgroundColor: '#1d1c1c' }}>
             <Divider sx={{ backgroundColor: '#bfbab0' }} />
-            <nav className="flex justify-between items-center w-full py-4 px-8 dark:bg-gray-900 shadow-md" style={{ backgroundColor: '#1d1c1c' }}>
+            <nav className="flex justify-between items-center w-full py-4 px-8" style={{ backgroundColor: '#1d1c1c' }}>
                 <div>
                     <a href="/" className="dark:text-gray-200 hover:underline">
                         CHASE TIPTON
