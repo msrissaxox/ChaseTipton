@@ -4,7 +4,7 @@ export default function Hero(){
     return(
         <div className="flex flex-col items-center justify-center w-full px-4">
 
-        <div className="flex flex-col w-full md:w-2/3 text-center text-4xl md:text-8xl m-8 md:m-16">
+        <div className="flex flex-col w-2/3 md:w-2/3 text-center text-4xl md:text-8xl pt-8 md:pt-16 pb-8 md:pb-16">
             <h1 className="flex justify-between w-full">
                 <span>ABOUT</span>
                 <span>THE</span>

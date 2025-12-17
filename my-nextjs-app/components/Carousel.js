@@ -45,7 +45,7 @@ export default function Carousel() {
                     {getVisibleImages().map((image, index) => (
                         <div
                             key={`${image.id}-${index}`}
-                            className="relative aspect-[1/2] md:aspect-[2/5] overflow-hidden shadow-lg transition-all duration-700 ease-in-out"
+                            className="relative aspect-[1/2] md:aspect-[3/4] overflow-hidden shadow-lg transition-all duration-700 ease-in-out"
                         >
                             <img
                                 src={image.src}

@@ -7,11 +7,11 @@ export default function Nav(){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return(
-        <div className="fixed top-0 w-full z-50 py-8" style={{ backgroundColor: '#1d1c1c' }}>
+        <div className="fixed top-0 w-full z-50 py-4 md:py-8" style={{ backgroundColor: '#1d1c1c' }}>
             <Divider sx={{ backgroundColor: '#bfbab0' }} />
-            <nav className="flex justify-between items-center w-full py-4 px-8" style={{ backgroundColor: '#1d1c1c' }}>
+            <nav className="flex justify-between items-center w-full py-2 md:py-4 px-4 md:px-8" style={{ backgroundColor: '#1d1c1c' }}>
                 <div>
-                    <a href="/" className="dark:text-gray-200 hover:underline">
+                    <a href="/" className="dark:text-gray-200 text-2xl hover:underline">
                         CHASE TIPTON
                     </a>
                 </div>
@@ -34,12 +34,12 @@ export default function Nav(){
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex space-x-6">
                     <li>
-                        <a href="/about" className="dark:text-gray-200 hover:underline">
+                        <a href="https://flickr.com/photos/203808147@N05/" target="_blank" rel="noopener noreferrer" className="font-serif text-lg md:text-2xl dark:text-gray-200 hover:underline">
                             MORE
                         </a>
                     </li>
                     <li>
-                        <a href="/contact" className="dark:text-gray-200 hover:underline">
+                        <a href="#contact" className="font-serif text-lg md:text-2xl dark:text-gray-200 hover:underline">
                             CONTACT
                         </a>
                     </li>
@@ -51,12 +51,12 @@ export default function Nav(){
                 <div className="md:hidden px-8 py-4" style={{ backgroundColor: '#1d1c1c' }}>
                     <ul className="flex flex-col space-y-4">
                         <li>
-                            <a href="/about" className="dark:text-gray-200 hover:underline block" onClick={() => setIsMenuOpen(false)}>
+                            <a href="/about" className="font-serif text-lg dark:text-gray-200 hover:underline block" onClick={() => setIsMenuOpen(false)}>
                                 MORE
                             </a>
                         </li>
                         <li>
-                            <a href="/contact" className="dark:text-gray-200 hover:underline block" onClick={() => setIsMenuOpen(false)}>
+                            <a href="#contact" className="font-serif text-lg dark:text-gray-200 hover:underline block" onClick={() => setIsMenuOpen(false)}>
                                 CONTACT
                             </a>
                         </li>
