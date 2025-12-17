@@ -10,13 +10,13 @@ export default function Hero(){
         <div ref={ref} className={`flex flex-col items-center justify-center w-full px-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
 
         <div className="flex flex-col w-2/3 md:w-2/3 text-center text-4xl md:text-8xl pt-8 md:pt-16 pb-8 md:pb-16">
-            <h1 className="flex justify-between w-full">
+            <h1 className="flex justify-between w-full tracking-tighter">
                 <span>ABOUT</span>
                 <span>THE</span>
             </h1>
-            <h1 className="text-center">PHOTOGRAPHER</h1>
+            <h1 className="text-center tracking-tighter">PHOTOGRAPHER</h1>
         </div>
-<p className="w-full md:w-1/3 text-justify px-4 md:px-0">
+<p className="w-3/4 md:w-2/4 text-justify px-4 md:px-0">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
     sed do eiusmod tempor incididunt ut labore et dolore 
     magna aliqua. Ut enim ad minim veniam, quis nostrud 

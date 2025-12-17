@@ -8,7 +8,7 @@ export default function Contact(){
     
     return(
         <div ref={ref} className={`pt-8 md:pt-16 pb-8 md:pb-16 px-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`} id="contact">
-        <div className="text-4xl md:text-8xl text-center pt-8 md:pt-16 pb-8 md:pb-16">CONTACT CHASE</div>
+        <div className="text-4xl md:text-8xl text-center pt-8 md:pt-16 pb-8 md:pb-16 tracking-tighter">CONTACT CHASE</div>
         <form className="flex flex-col text-center w-full md:w-2/5 mx-auto space-y-4 my-8">
             <input className="border p-2" type="text" placeholder="Your Name" />
             <input className="border p-2" type="email" placeholder="Your Email" />

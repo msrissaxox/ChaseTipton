@@ -7,14 +7,14 @@ export default function Nav(){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return(
-        <div className="fixed top-0 w-full z-50 py-4 md:py-8" style={{ backgroundColor: '#1d1c1c' }}>
+        <div className="fixed top-0 w-full z-50 py-2 md:py-4" style={{ backgroundColor: '#1d1c1c' }}>
             <div className="w-full flex justify-center">
-                <Divider sx={{ backgroundColor: '#bfbab0', width: '90%' }} />
+                <Divider className=""sx={{ backgroundColor: '#bfbab0', width: '90%' }} />
             </div>
             <div className="w-full flex justify-center">
-                <nav className="flex justify-between items-center w-[90%] py-2 md:py-4" style={{ backgroundColor: '#1d1c1c' }}>
+                <nav className="flex justify-between items-center w-[90%] py-1 md:py-2" style={{ backgroundColor: '#1d1c1c' }}>
                     <div>
-                        <a href="/" className="dark:text-gray-200 text-2xl hover:underline">
+                        <a href="/" className="dark:text-gray-200 text-2xl">
                             CHASE TIPTON
                         </a>
                     </div>
@@ -37,12 +37,12 @@ export default function Nav(){
                     {/* Desktop Menu */}
                     <ul className="hidden md:flex space-x-6">
                         <li>
-                            <a href="https://flickr.com/photos/203808147@N05/" target="_blank" rel="noopener noreferrer" className="font-serif text-lg md:text-2xl dark:text-gray-200 hover:underline">
+                            <a href="https://flickr.com/photos/203808147@N05/" target="_blank" rel="noopener noreferrer" className="font-serif text-lg md:text-2xl dark:text-gray-200">
                                 MORE
                             </a>
                         </li>
                         <li>
-                            <a href="#contact" className="font-serif text-lg md:text-2xl dark:text-gray-200 hover:underline">
+                            <a href="#contact" className="font-serif text-lg md:text-2xl dark:text-gray-200">
                                 CONTACT
                             </a>
                         </li>
