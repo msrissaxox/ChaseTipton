@@ -41,6 +41,15 @@ export default function Carousel() {
     // Triple the images for seamless infinite loop
     const extendedImages = [...images, ...images, ...images];
 
+    // Initial advance to show animation immediately on page load
+    useEffect(() => {
+        const initialTimeout = setTimeout(() => {
+            setCurrentIndex(4);
+        }, 2000); // Advance after 2 seconds
+
+        return () => clearTimeout(initialTimeout);
+    }, []);
+
     // Auto-rotate every 4 seconds - advance by 4 images
     useEffect(() => {
         if (!isPaused) {
