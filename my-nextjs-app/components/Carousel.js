@@ -12,6 +12,9 @@ export default function Carousel() {
     const [zoomedImage, setZoomedImage] = useState(null);
     const [touchStart, setTouchStart] = useState(0);
     const [touchEnd, setTouchEnd] = useState(0);
+    const [isDragging, setIsDragging] = useState(false);
+    const [dragStart, setDragStart] = useState(0);
+    const [dragOffset, setDragOffset] = useState(0);
     const { ref, isVisible } = useScrollFadeIn();
     const transitionRef = useRef(null);
     const intervalRef = useRef(null);
@@ -88,10 +91,17 @@ export default function Carousel() {
     // Touch handlers for mobile swipe
     const handleTouchStart = (e) => {
         setTouchStart(e.targetTouches[0].clientX);
+        setDragStart(e.targetTouches[0].clientX);
+        setIsDragging(true);
+        setIsPaused(true);
     };
 
     const handleTouchMove = (e) => {
         setTouchEnd(e.targetTouches[0].clientX);
+        if (isDragging) {
+            const currentPosition = e.targetTouches[0].clientX;
+            setDragOffset(currentPosition - dragStart);
+        }
     };
 
     const handleTouchEnd = () => {
@@ -114,22 +124,73 @@ export default function Carousel() {
         // Reset values
         setTouchStart(0);
         setTouchEnd(0);
+        setIsDragging(false);
+        setDragOffset(0);
+        
+        setTimeout(() => {
+            setIsPaused(false);
+        }, 2000);
+    };
+
+    // Mouse drag handlers for desktop
+    const handleMouseDown = (e) => {
+        setDragStart(e.clientX);
+        setIsDragging(true);
+        setIsPaused(true);
+        e.preventDefault();
+    };
+
+    const handleMouseMove = (e) => {
+        if (isDragging) {
+            const currentPosition = e.clientX;
+            setDragOffset(currentPosition - dragStart);
+        }
+    };
+
+    const handleMouseUp = () => {
+        if (isDragging) {
+            const threshold = 50;
+            if (dragOffset < -threshold) {
+                // Dragged left - go forward
+                setCurrentIndex((prevIndex) => prevIndex + 1);
+            } else if (dragOffset > threshold) {
+                // Dragged right - go back
+                setCurrentIndex((prevIndex) => Math.max(0, prevIndex - 1));
+            }
+            
+            setIsDragging(false);
+            setDragOffset(0);
+            
+            setTimeout(() => {
+                setIsPaused(false);
+            }, 2000);
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (isDragging) {
+            handleMouseUp();
+        }
     };
 
     return (
         <div ref={ref} className={`w-full py-4 md:py-8 overflow-hidden transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <div 
-                className="w-full overflow-hidden"
+                className={`w-full overflow-hidden ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseLeave}
             >
                 <div 
                     ref={transitionRef}
                     className="flex gap-1 md:gap-2"
                     style={{ 
-                        transform: `translateX(calc(-${currentIndex * 25}% - ${currentIndex * 0.0625}rem))`,
-                        transition: 'transform 1000ms ease-in-out'
+                        transform: `translateX(calc(-${currentIndex * 25}% - ${currentIndex * 0.0625}rem + ${dragOffset}px))`,
+                        transition: isDragging ? 'none' : 'transform 1000ms ease-in-out'
                     }}
                     onTransitionEnd={handleTransitionEnd}
                 >
