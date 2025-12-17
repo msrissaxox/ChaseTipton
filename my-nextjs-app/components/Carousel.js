@@ -1,9 +1,11 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import useScrollFadeIn from '../hooks/useScrollFadeIn';
 
 export default function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const { ref, isVisible } = useScrollFadeIn();
     
     // Array of 15 images
     const images = Array.from({ length: 15 }, (_, i) => ({
@@ -39,7 +41,7 @@ export default function Carousel() {
     };
 
     return (
-        <div className="w-full py-4 md:py-8 overflow-hidden">
+        <div ref={ref} className={`w-full py-4 md:py-8 overflow-hidden transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <div className="w-full">
                 <div className="grid grid-cols-4 gap-1 md:gap-2">
                     {getVisibleImages().map((image, index) => (
