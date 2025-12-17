@@ -27,72 +27,72 @@ export default function Carousel() {
     {
       id: 2,
       src: "/chase-tipton-concert-photography-2.jpg",
-      alt: "Candid live music concert photography by Chase Tipton Macro detail of guitarist hands",
+      alt: "Candid live music concert photography by Chase Tipton - Macro detail of guitarist hand, with the crowd in the background",
     },
     {
       id: 3,
       src: "/chase-tipton-concert-photography-3.jpg",
-      alt: "Urban photography by Chase Tipton - couple in a club, having a great time in City/Location",
+      alt: "Urban photography by Chase Tipton - couple in a club, leaning into the camera, having a great time in City/Location, with peopple in the background",
     },
     {
       id: 4,
       src: "/chase-tipton-concert-photography-4.jpg",
-      alt: "Candid cinematic black and white photography by Chase Tipton - Detailed shot of band playing",
+      alt: "Dynamic motion blur cinematic black and white photography by Chase Tipton - Detailed shot of band passionately playing guitar, on a stage with dramatic lighting",
     },
     {
       id: 5,
       src: "/chase-tipton-concert-photography-5.jpg",
-      alt: "Event photography by Chase Tipton - Candid moment at celebration",
+      alt: "Event photography by Chase Tipton - Candid moment at club, people dancing in costumes and enjoying the music, couple kissing in the center",
     },
     {
       id: 6,
       src: "/chase-tipton-concert-photography-6.jpg",
-      alt: "Fashion photography by Chase Tipton - Editorial style portrait shoot",
+      alt: "Wildlife photography by Chase Tipton - Shot of a bird in nature, perched on a branch with detailed feathers",
     },
     {
       id: 7,
       src: "/chase-tipton-concert-photography-7.jpg",
-      alt: "Travel photography by Chase Tipton - Scenic coastal landscape",
+      alt: "Candid photography by Chase Tipton - Woman in a dress, looking over her shoulder with a smile, in an outdoor setting, trees in the background",
     },
     {
       id: 8,
       src: "/chase-tipton-concert-photography-8.jpg",
-      alt: "Studio photography by Chase Tipton - Professional headshot portrait",
+      alt: "Event photography by Chase Tipton - Photo of a dancer elevated above the crowd, surrounded by people cheering and enjoying the moment",
     },
     {
       id: 9,
       src: "/chase-tipton-concert-photography-9.jpg",
-      alt: "Wildlife photography by Chase Tipton - Animal in natural habitat",
+      alt: "Event photography by Chase Tipton - Friends embracing and smiling in a club setting",
     },
     {
       id: 10,
       src: "/chase-tipton-concert-photography-10.jpg",
-      alt: "Architectural photography by Chase Tipton - Modern building exterior",
+      alt: "Event photography by Chase Tipton - Woman in club attire, dancing with arms raised, wearing colorful bracelets and brick wall in the background",
     },
     {
       id: 11,
       src: "/chase-tipton-concert-photography-11.jpg",
-      alt: "Fine art photography by Chase Tipton - Abstract composition and lighting",
+      alt: "Event photography by Chase Tipton - Photo of two people embracing closely and smiling, in front of a crowd of people at a club, people dancing in the background",
     },
     {
       id: 12,
       src: "/chase-tipton-concert-photography-12.jpg",
-      alt: "Documentary photography by Chase Tipton - Authentic storytelling moment",
+      alt: "Event photography by Chase Tipton - Photo of a crowd enjoying a live event, hands raised towards the stage with dramatic lighting",
     },
     {
       id: 13,
       src: "/chase-tipton-concert-photography-13.jpg",
-      alt: "Wedding photography by Chase Tipton - Romantic couple portrait",
+      alt: "Event photography by Chase Tipton - Photo of a person in a crowd, illuminated by colorful stage lights, enjoying the music at an event, celebratory atmosphere",
     },
     {
       id: 14,
       src: "/chase-tipton-concert-photography-14.jpg",
-      alt: "Commercial photography by Chase Tipton - Product and lifestyle shot",
+      alt: "Event photography by Chase Tipton - Two women dancing closely, surrounded by a crowd at a lively event, colorful lighting enhancing the festive mood",
     },
     {
       id: 15,
       src: "/chase-tipton-concert-photography-15.jpg",
-      alt: "Black and white photography by Chase Tipton - Timeless portrait study",
+      alt: "Event photography by Chase Tipton - woman dancing energetically in a club, colorful lights and crowd in the background",
     },
   ];
 
