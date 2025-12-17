@@ -1,4 +1,4 @@
-//NEED TO UPDATE THE ALTS FOR ALL THESE IMAGES
+//NEED TO UPDATE THE ALTS FOR ALL THESE IMAges
 
 'use client';
 
@@ -10,6 +10,8 @@ export default function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0); // Start at beginning of middle set
     const [isPaused, setIsPaused] = useState(false);
     const [zoomedImage, setZoomedImage] = useState(null);
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
     const { ref, isVisible } = useScrollFadeIn();
     const transitionRef = useRef(null);
     const intervalRef = useRef(null);
@@ -83,9 +85,45 @@ export default function Carousel() {
         }
     };
 
+    // Touch handlers for mobile swipe
+    const handleTouchStart = (e) => {
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > 50;
+        const isRightSwipe = distance < -50;
+
+        if (isLeftSwipe) {
+            // Swipe left - go forward by 1 image
+            setCurrentIndex((prevIndex) => prevIndex + 1);
+        }
+        
+        if (isRightSwipe) {
+            // Swipe right - go back by 1 image
+            setCurrentIndex((prevIndex) => Math.max(0, prevIndex - 1));
+        }
+
+        // Reset values
+        setTouchStart(0);
+        setTouchEnd(0);
+    };
+
     return (
         <div ref={ref} className={`w-full py-4 md:py-8 overflow-hidden transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="w-full overflow-hidden">
+            <div 
+                className="w-full overflow-hidden"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+            >
                 <div 
                     ref={transitionRef}
                     className="flex gap-1 md:gap-2"
