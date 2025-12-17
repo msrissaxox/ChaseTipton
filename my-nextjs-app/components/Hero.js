@@ -7,7 +7,7 @@ export default function Hero(){
     const { ref, isVisible } = useScrollFadeIn();
     
     return(
-        <div ref={ref} className={`flex flex-col items-center justify-center w-full px-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <section ref={ref} className={`flex flex-col items-center justify-center w-full px-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`} aria-label="About Chase Tipton">
 
         <div className="flex flex-col w-2/3 md:w-2/3 text-center text-4xl md:text-8xl pt-8 md:pt-16 pb-8 md:pb-16">
             <h1 className="flex justify-between w-full tracking-tighter">
@@ -28,6 +28,6 @@ export default function Hero(){
       laborum.
 </p>
       
-        </div>
+        </section>
     )
 }

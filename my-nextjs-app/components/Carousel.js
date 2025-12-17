@@ -1,6 +1,9 @@
+//NEED TO UPDATE THE ALTS FOR ALL THESE IMAGES
+
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image'; // 1. Import the Next.js Image component
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
 
 export default function Carousel() {
@@ -8,12 +11,24 @@ export default function Carousel() {
     const { ref, isVisible } = useScrollFadeIn();
     const transitionRef = useRef(null);
     
-    // Array of 15 images
-    const images = Array.from({ length: 15 }, (_, i) => ({
-        id: i + 1,
-        src: `/image${i + 1}.jpg`,
-        alt: `Photo ${i + 1}`
-    }));
+    // Array of 15 images with descriptive alt text
+    const images = [
+        { id: 1, src: '/chase-tipton-concert-photography-1.jpg', alt: 'Chase Tipton Photography - live concert event candidtaken in City/Location' },
+        { id: 2, src: '/chase-tipton-concert-photography-2.jpg', alt: 'Candid live music concert photography by Chase Tipton Macro detail of guitarist hands' },
+        { id: 3, src: '/chase-tipton-concert-photography-3.jpg', alt: 'Urban photography by Chase Tipton - couple in a club, having a great time in City/Location' },
+        { id: 4, src: '/chase-tipton-concert-photography-4.jpg', alt: 'Candid cinematic black and white photography by Chase Tipton - Detailed shot of band playing' },
+        { id: 5, src: '/chase-tipton-concert-photography-5.jpg', alt: 'Event photography by Chase Tipton - Candid moment at celebration' },
+        { id: 6, src: '/chase-tipton-concert-photography-6.jpg', alt: 'Fashion photography by Chase Tipton - Editorial style portrait shoot' },
+        { id: 7, src: '/chase-tipton-concert-photography-7.jpg', alt: 'Travel photography by Chase Tipton - Scenic coastal landscape' },
+        { id: 8, src: '/chase-tipton-concert-photography-8.jpg', alt: 'Studio photography by Chase Tipton - Professional headshot portrait' },
+        { id: 9, src: '/chase-tipton-concert-photography-9.jpg', alt: 'Wildlife photography by Chase Tipton - Animal in natural habitat' },
+        { id: 10, src: '/chase-tipton-concert-photography-10.jpg', alt: 'Architectural photography by Chase Tipton - Modern building exterior' },
+        { id: 11, src: '/chase-tipton-concert-photography-11.jpg', alt: 'Fine art photography by Chase Tipton - Abstract composition and lighting' },
+        { id: 12, src: '/chase-tipton-concert-photography-12.jpg', alt: 'Documentary photography by Chase Tipton - Authentic storytelling moment' },
+        { id: 13, src: '/chase-tipton-concert-photography-13.jpg', alt: 'Wedding photography by Chase Tipton - Romantic couple portrait' },
+        { id: 14, src: '/chase-tipton-concert-photography-14.jpg', alt: 'Commercial photography by Chase Tipton - Product and lifestyle shot' },
+        { id: 15, src: '/chase-tipton-concert-photography-15.jpg', alt: 'Black and white photography by Chase Tipton - Timeless portrait study' }
+    ];
 
     // Triple the images for seamless infinite loop
     const extendedImages = [...images, ...images, ...images];
@@ -61,10 +76,11 @@ export default function Carousel() {
                             className="relative aspect-[1/2] md:aspect-[3/4] overflow-hidden shadow-lg flex-shrink-0"
                             style={{ width: 'calc(25% - 0.1875rem)' }}
                         >
-                            <img
+                            <Image
                                 src={image.src}
                                 alt={image.alt}
-                                className="w-full h-full object-cover"
+                                fill
+                                className="object-cover"
                             />
                         </div>
                     ))}
