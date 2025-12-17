@@ -7,16 +7,24 @@ export default function Hero(){
     const { ref, isVisible } = useScrollFadeIn();
     
     return(
-        <section ref={ref} className={`pt-8 md:pt-16 pb-8 md:pb-16 px-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`} aria-label="About Chase Tipton">
+        <section ref={ref} className="pt-8 md:pt-16 pb-8 md:pb-16 px-4" aria-label="About Chase Tipton">
 
         <div className="text-4xl md:text-8xl text-center pt-8 md:pt-16 pb-8 md:pb-16 tracking-tighter">
             <h1 className="flex justify-between w-full px-4 md:px-0 md:w-2/3 mx-auto">
-                <span>ABOUT</span>
-                <span>THE</span>
+                <span className={`inline-block transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'}`} style={{ transitionDelay: '0ms' }}>
+                    ABOUT
+                </span>
+                <span className={`inline-block transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'}`} style={{ transitionDelay: '200ms' }}>
+                    THE
+                </span>
             </h1>
-            <h1 className="text-center">PHOTOGRAPHER</h1>
+            <h1 className="text-center">
+                <span className={`inline-block transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'}`} style={{ transitionDelay: '400ms' }}>
+                    PHOTOGRAPHER
+                </span>
+            </h1>
         </div>
-<p className="w-full md:w-2/5 mx-auto text-justify">
+<p className={`w-full md:w-2/5 mx-auto text-justify transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '600ms' }}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
     sed do eiusmod tempor incididunt ut labore et dolore 
     magna aliqua. Ut enim ad minim veniam, quis nostrud 

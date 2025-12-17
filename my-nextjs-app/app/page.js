@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Carousel from "@/components/Carousel";
+import Marquee from "@/components/Marquee";
 import Hero from "@/components/Hero";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -30,6 +31,7 @@ export default function Home() {
       <Nav />
       <main className="pt-24">
         <Carousel />
+        <Marquee />
         <Hero />
         <Contact />
       </main>

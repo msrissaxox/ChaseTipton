@@ -8,8 +8,10 @@ import useScrollFadeIn from '../hooks/useScrollFadeIn';
 
 export default function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0); // Start at beginning of middle set
+    const [isPaused, setIsPaused] = useState(false);
     const { ref, isVisible } = useScrollFadeIn();
     const transitionRef = useRef(null);
+    const intervalRef = useRef(null);
     
     // Array of 15 images with descriptive alt text
     const images = [
@@ -35,12 +37,26 @@ export default function Carousel() {
 
     // Auto-rotate every 4 seconds - advance by 4 images
     useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => prevIndex + 4);
-        }, 4000);
+        if (!isPaused) {
+            intervalRef.current = setInterval(() => {
+                setCurrentIndex((prevIndex) => prevIndex + 4);
+            }, 4000);
+        }
 
-        return () => clearInterval(interval);
-    }, []);
+        return () => {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+            }
+        };
+    }, [isPaused]);
+
+    // Handle image click - pause carousel temporarily
+    const handleImageClick = () => {
+        setIsPaused(true);
+        setTimeout(() => {
+            setIsPaused(false);
+        }, 5000); // Resume after 5 seconds
+    };
 
     // Handle seamless loop reset
     const handleTransitionEnd = () => {
@@ -73,14 +89,15 @@ export default function Carousel() {
                     {extendedImages.map((image, index) => (
                         <div
                             key={`${image.id}-${index}`}
-                            className="relative aspect-[1/2] md:aspect-[3/4] overflow-hidden shadow-lg flex-shrink-0"
+                            className="relative aspect-[1/2] md:aspect-[3/4] overflow-hidden shadow-lg flex-shrink-0 group"
                             style={{ width: 'calc(25% - 0.1875rem)' }}
+                            onClick={handleImageClick}
                         >
                             <Image
                                 src={image.src}
                                 alt={image.alt}
                                 fill
-                                className="object-cover"
+                                className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                             />
                         </div>
                     ))}

@@ -43,7 +43,7 @@ export default function Nav(){
                         </li>
                         <li>
                             <a href="#contact" className="font-serif text-lg md:text-2xl dark:text-gray-200">
-                                CONTACT
+                                BOOK NOW
                             </a>
                         </li>
                     </ul>
@@ -65,7 +65,7 @@ export default function Nav(){
                         </li>
                         <li>
                             <a href="#contact" className="font-serif text-lg dark:text-gray-200 hover:underline block" onClick={() => setIsMenuOpen(false)}>
-                                CONTACT
+                                BOOK NOW
                             </a>
                         </li>
                     </ul>
