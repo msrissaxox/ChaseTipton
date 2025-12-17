@@ -9,6 +9,7 @@ import useScrollFadeIn from '../hooks/useScrollFadeIn';
 export default function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0); // Start at beginning of middle set
     const [isPaused, setIsPaused] = useState(false);
+    const [zoomedImage, setZoomedImage] = useState(null);
     const { ref, isVisible } = useScrollFadeIn();
     const transitionRef = useRef(null);
     const intervalRef = useRef(null);
@@ -50,12 +51,20 @@ export default function Carousel() {
         };
     }, [isPaused]);
 
-    // Handle image click - pause carousel temporarily
-    const handleImageClick = () => {
+    // Handle image click - pause carousel temporarily and zoom on mobile
+    const handleImageClick = (imageKey) => {
         setIsPaused(true);
+        
+        // Toggle zoom for mobile
+        if (zoomedImage === imageKey) {
+            setZoomedImage(null);
+        } else {
+            setZoomedImage(imageKey);
+        }
+        
         setTimeout(() => {
             setIsPaused(false);
-        }, 5000); // Resume after 5 seconds
+        }, 2000); // Resume after 2 seconds
     };
 
     // Handle seamless loop reset
@@ -86,21 +95,28 @@ export default function Carousel() {
                     }}
                     onTransitionEnd={handleTransitionEnd}
                 >
-                    {extendedImages.map((image, index) => (
-                        <div
-                            key={`${image.id}-${index}`}
-                            className="relative aspect-[1/2] md:aspect-[3/4] overflow-hidden shadow-lg flex-shrink-0 group"
-                            style={{ width: 'calc(25% - 0.1875rem)' }}
-                            onClick={handleImageClick}
-                        >
-                            <Image
-                                src={image.src}
-                                alt={image.alt}
-                                fill
-                                className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-                            />
-                        </div>
-                    ))}
+                    {extendedImages.map((image, index) => {
+                        const imageKey = `${image.id}-${index}`;
+                        const isZoomed = zoomedImage === imageKey;
+                        
+                        return (
+                            <div
+                                key={imageKey}
+                                className="relative aspect-[1/2] md:aspect-[3/4] overflow-hidden shadow-lg flex-shrink-0 group"
+                                style={{ width: 'calc(25% - 0.1875rem)' }}
+                                onClick={() => handleImageClick(imageKey)}
+                            >
+                                <Image
+                                    src={image.src}
+                                    alt={image.alt}
+                                    fill
+                                    className={`object-cover transition-transform duration-500 ease-out ${
+                                        isZoomed ? 'scale-150 md:scale-110' : 'md:group-hover:scale-110'
+                                    }`}
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>
