@@ -55,6 +55,8 @@ export default function Nav() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-serif text-lg text-[#bfbab0] hover:underline"
+                aria-label="View more photography by Chase Tipton on Flickr"
+                title="View Chase Tipton's photography portfolio on Flickr"
               >
                 MORE
               </a>
@@ -83,6 +85,8 @@ export default function Nav() {
                 rel="noopener noreferrer"
                 className="font-serif text-lg text-[#bfbab0] hover:underline block"
                 onClick={() => setIsMenuOpen(false)}
+                aria-label="View more photography by Chase Tipton on Flickr"
+                title="View Chase Tipton's photography portfolio on Flickr"
               >
                 MORE
               </a>
