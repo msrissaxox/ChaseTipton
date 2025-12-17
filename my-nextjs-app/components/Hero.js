@@ -10,7 +10,7 @@ export default function Hero(){
         <section ref={ref} className={`pt-8 md:pt-16 pb-8 md:pb-16 px-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`} aria-label="About Chase Tipton">
 
         <div className="text-4xl md:text-8xl text-center pt-8 md:pt-16 pb-8 md:pb-16 tracking-tighter">
-            <h1 className="flex justify-center gap-4 md:gap-8 w-full">
+            <h1 className="flex justify-between w-full px-4 md:px-0 md:w-2/3 mx-auto">
                 <span>ABOUT</span>
                 <span>THE</span>
             </h1>
