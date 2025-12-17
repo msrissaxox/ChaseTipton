@@ -39,6 +39,14 @@ export default function Contact(){
         field="email"
         errors={state.errors}
       />
+
+      <input 
+  type="text" 
+  name="_gotcha" 
+  tabIndex="-1" 
+  autoComplete="off" 
+  style={{ display: 'none' }} 
+/>
             
             <textarea className="border border-[#bfbab0] p-2 bg-transparent text-[#bfbab0] focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 focus:shadow-[0_0_10px_rgba(34,211,238,0.5)] transition-all duration-300" id="message" name="message" placeholder="Your Message"></textarea>
               <ValidationError 

@@ -21,7 +21,7 @@ export default function LogosMarquee() {
                 AS SEEN AT
             </div>
             <div className="flex whitespace-nowrap animate-logos-marquee">
-                <div className="flex items-center gap-24 pr-24">
+                <div className="flex items-center gap-24">
                     {logos.map((logo, index) => (
                         <div
                             key={`logo-1-${index}`}
@@ -31,7 +31,7 @@ export default function LogosMarquee() {
                         </div>
                     ))}
                 </div>
-                <div className="flex items-center gap-24 pr-24">
+                <div className="flex items-center gap-24 pl-24">
                     {logos.map((logo, index) => (
                         <div
                             key={`logo-2-${index}`}
