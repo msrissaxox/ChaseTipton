@@ -39,13 +39,13 @@ export default function Carousel() {
     };
 
     return (
-        <div className="w-full py-8 overflow-hidden">
+        <div className="w-full py-4 md:py-8 overflow-hidden">
             <div className="w-full">
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-4 gap-1 md:gap-2">
                     {getVisibleImages().map((image, index) => (
                         <div
                             key={`${image.id}-${index}`}
-                            className="relative aspect-[4/5] overflow-hidden  shadow-lg transition-all duration-700 ease-in-out"
+                            className="relative aspect-[1/2] md:aspect-[2/5] overflow-hidden shadow-lg transition-all duration-700 ease-in-out"
                         >
                             <img
                                 src={image.src}
