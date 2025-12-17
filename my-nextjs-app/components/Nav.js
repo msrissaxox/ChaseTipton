@@ -51,24 +51,26 @@ export default function Nav(){
             </div>
             
             {/* Mobile Menu Dropdown */}
-            {isMenuOpen && (
-                <div className="w-full flex justify-center">
-                    <div className="md:hidden w-[90%] py-4" style={{ backgroundColor: '#1d1c1c' }}>
-                        <ul className="flex flex-col space-y-4">
-                            <li>
-                                <a href="/about" className="font-serif text-lg dark:text-gray-200 hover:underline block" onClick={() => setIsMenuOpen(false)}>
-                                    MORE
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contact" className="font-serif text-lg dark:text-gray-200 hover:underline block" onClick={() => setIsMenuOpen(false)}>
-                                    CONTACT
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+            <div 
+                className={`w-full flex justify-center overflow-hidden transition-all duration-300 ease-in-out ${
+                    isMenuOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                }`}
+            >
+                <div className="md:hidden w-[90%] py-4" style={{ backgroundColor: '#1d1c1c' }}>
+                    <ul className="flex flex-col space-y-4">
+                        <li>
+                            <a href="https://flickr.com/photos/203808147@N05/" target="_blank" rel="noopener noreferrer" className="font-serif text-lg dark:text-gray-200 hover:underline block" onClick={() => setIsMenuOpen(false)}>
+                                MORE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" className="font-serif text-lg dark:text-gray-200 hover:underline block" onClick={() => setIsMenuOpen(false)}>
+                                CONTACT
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            )}
+            </div>
             
             <div className="w-full flex justify-center">
                 <Divider sx={{ backgroundColor: '#bfbab0', width: '90%' }} />

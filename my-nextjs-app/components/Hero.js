@@ -7,16 +7,16 @@ export default function Hero(){
     const { ref, isVisible } = useScrollFadeIn();
     
     return(
-        <section ref={ref} className={`flex flex-col items-center justify-center w-full px-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`} aria-label="About Chase Tipton">
+        <section ref={ref} className={`pt-8 md:pt-16 pb-8 md:pb-16 px-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`} aria-label="About Chase Tipton">
 
-        <div className="flex flex-col w-2/3 md:w-2/3 text-center text-4xl md:text-8xl pt-8 md:pt-16 pb-8 md:pb-16">
-            <h1 className="flex justify-between w-full tracking-tighter">
+        <div className="text-4xl md:text-8xl text-center pt-8 md:pt-16 pb-8 md:pb-16 tracking-tighter">
+            <h1 className="flex justify-center gap-4 md:gap-8 w-full">
                 <span>ABOUT</span>
                 <span>THE</span>
             </h1>
-            <h1 className="text-center tracking-tighter">PHOTOGRAPHER</h1>
+            <h1 className="text-center">PHOTOGRAPHER</h1>
         </div>
-<p className="w-3/4 md:w-2/4 text-justify px-4 md:px-0">
+<p className="w-full md:w-2/5 mx-auto text-justify">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
     sed do eiusmod tempor incididunt ut labore et dolore 
     magna aliqua. Ut enim ad minim veniam, quis nostrud 
