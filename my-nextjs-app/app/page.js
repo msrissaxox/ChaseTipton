@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Carousel from "@/components/Carousel";
 import Marquee from "@/components/Marquee";
 import Hero from "@/components/Hero";
+import LogosMarquee from "@/components/LogosMarquee";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -33,6 +34,7 @@ export default function Home() {
         <Carousel />
         <Marquee />
         <Hero />
+        <LogosMarquee />
         <Contact />
       </main>
       <Footer />
