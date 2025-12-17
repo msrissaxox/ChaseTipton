@@ -12,9 +12,9 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Chase Tipton",
-    "jobTitle": "Professional Photographer",
-    "url": "https://chasetiptonphotography.com"
+    name: "Chase Tipton",
+    jobTitle: "Professional Photographer",
+    url: "https://chasetiptonphotography.com",
     // Add these fields ONLY when you have real data:
     // "telephone": "+1-555-123-4567",
     // "email": "contact@chasetiptonphotography.com",

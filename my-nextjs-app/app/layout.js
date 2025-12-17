@@ -14,14 +14,14 @@ const ptSerif = PT_Serif({
   display: "swap",
 });
 
-
 export const metadata = {
-  metadataBase: new URL('https://chasetiptonphotography.com'), // Update with your actual domain
+  metadataBase: new URL("https://chasetiptonphotography.com"), // Update with your actual domain
   title: {
     default: "Chase Tipton Photography | Professional Photographer Portfolio",
     template: "%s | Chase Tipton Photography",
   },
-  description: "Award-winning professional photography by Chase Tipton. Specializing in portrait, landscape, and wedding photography. View portfolio and book your session today.",
+  description:
+    "Award-winning professional photography by Chase Tipton. Specializing in portrait, landscape, and wedding photography. View portfolio and book your session today.",
   keywords: [
     "Chase Tipton",
     "Professional Photographer",
@@ -30,7 +30,7 @@ export const metadata = {
     "Landscape Photography",
     "Wedding Photography",
     "California Photographer",
-    "Professional Photography Services"
+    "Professional Photography Services",
   ],
   authors: [{ name: "Chase Tipton" }],
   creator: "Chase Tipton",
@@ -42,7 +42,8 @@ export const metadata = {
   },
   openGraph: {
     title: "Chase Tipton Photography | Professional Photographer Portfolio",
-    description: "Award-winning professional photography by Chase Tipton. Specializing in portrait, landscape, and wedding photography.",
+    description:
+      "Award-winning professional photography by Chase Tipton. Specializing in portrait, landscape, and wedding photography.",
     url: "https://chasetiptonphotography.com",
     siteName: "Chase Tipton Photography",
     images: [
@@ -59,7 +60,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Chase Tipton Photography | Professional Photographer Portfolio",
-    description: "Award-winning professional photography by Chase Tipton. View portfolio and book your session.",
+    description:
+      "Award-winning professional photography by Chase Tipton. View portfolio and book your session.",
     images: ["/og-image.jpg"],
     creator: "@chasetiptonphoto", // Update with actual Twitter handle
   },
@@ -69,9 +71,9 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
@@ -82,11 +84,11 @@ export const metadata = {
 };
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: '#1d1c1c',
+  themeColor: "#1d1c1c",
 };
 
 export default function RootLayout({ children }) {
@@ -95,11 +97,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="canonical" href="https://chasetiptonphotography.com" />
       </head>
-      <body
-        className={`${montserrat.variable} ${ptSerif.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${montserrat.variable} ${ptSerif.variable} antialiased`}>{children}</body>
     </html>
   );
 }
