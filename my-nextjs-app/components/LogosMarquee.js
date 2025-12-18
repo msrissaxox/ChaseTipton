@@ -6,6 +6,7 @@ export default function LogosMarquee() {
     "EVENT PHOTOGRAPHY",
     "PERSONAL PORTRAITS",
     "FAMILY PORTRAITS",
+    "PERSONAL PHOTOS",
   ];
 
   return (
