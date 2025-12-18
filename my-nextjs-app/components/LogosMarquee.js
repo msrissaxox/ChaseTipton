@@ -9,29 +9,27 @@ export default function LogosMarquee() {
     "PERSONAL PHOTOS",
   ];
 
+  // Create the text with separators using non-breaking spaces
+  const separator = "\u00A0\u00A0\u00A0\u00A0•\u00A0\u00A0\u00A0\u00A0";
+  const marqueeText = specializations.join(separator);
+
   return (
     <div className="w-full overflow-hidden bg-[#1d1c1c] py-6 border-y border-[#bfbab0]/20">
       <div className="text-center text-[#bfbab0] text-sm tracking-widest mb-4">SPECIALIZES IN</div>
-      <div className="flex whitespace-nowrap animate-logos-marquee">
-        <div className="flex items-center gap-24">
-          {specializations.map((specialization, index) => (
-            <div
-              key={`spec-1-${index}`}
-              className="text-[#bfbab0] font-bold text-xl tracking-wide px-6 py-3 border border-[#bfbab0]/30 rounded"
-            >
-              {specialization}
-            </div>
-          ))}
-        </div>
-        <div className="flex items-center gap-24 pl-24">
-          {specializations.map((specialization, index) => (
-            <div
-              key={`spec-2-${index}`}
-              className="text-[#bfbab0] font-bold text-xl tracking-wide px-6 py-3 border border-[#bfbab0]/30 rounded"
-            >
-              {specialization}
-            </div>
-          ))}
+      <div className="relative flex overflow-hidden">
+        <div className="flex animate-logos-marquee pl-4">
+          <span className="text-[#bfbab0] font-bold text-sm md:text-xl tracking-wide whitespace-nowrap">
+            {marqueeText}{separator}
+          </span>
+          <span className="text-[#bfbab0] font-bold text-sm md:text-xl tracking-wide whitespace-nowrap">
+            {marqueeText}{separator}
+          </span>
+          <span className="text-[#bfbab0] font-bold text-sm md:text-xl tracking-wide whitespace-nowrap">
+            {marqueeText}{separator}
+          </span>
+          <span className="text-[#bfbab0] font-bold text-sm md:text-xl tracking-wide whitespace-nowrap">
+            {marqueeText}{separator}
+          </span>
         </div>
       </div>
       <style jsx>{`
@@ -44,7 +42,7 @@ export default function LogosMarquee() {
           }
         }
         .animate-logos-marquee {
-          animation: logos-marquee 10s linear infinite;
+          animation: logos-marquee 35s linear infinite;
         }
       `}</style>
     </div>
