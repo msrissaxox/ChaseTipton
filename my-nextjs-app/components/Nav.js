@@ -58,11 +58,11 @@ export default function Nav() {
                 aria-label="View more photography by Chase Tipton on Flickr"
                 title="View Chase Tipton's photography portfolio on Flickr"
               >
-                MORE
+                MORE <span className="sr-only">event photography on Flickr</span>
               </a>
             </li>
             <li>
-              <a href="#contact" className="font-serif text-lg md:text-2xl text-[#bfbab0]">
+              <a href="#contact" className="font-serif text-lg text-[#bfbab0]">
                 BOOK NOW
               </a>
             </li>
@@ -88,7 +88,7 @@ export default function Nav() {
                 aria-label="View more photography by Chase Tipton on Flickr"
                 title="View Chase Tipton's photography portfolio on Flickr"
               >
-                MORE
+                MORE <span className="sr-only">event photography on Flickr</span>
               </a>
             </li>
             <li>
