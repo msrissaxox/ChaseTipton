@@ -35,12 +35,9 @@ export default function Hero() {
         className={`w-full md:w-2/5 mx-auto text-justify transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         style={{ transitionDelay: "600ms" }}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+        My name is Chase. I am a Los Angeles–based photographer who has been behind the lens since high school, when photography first started as a creative hobby and quickly became a true passion. What began as a way to capture moments and create memories has evolved into a career driven by my love for the art form, the people, and the events I photograph. I focus on creating authentic and visually compelling images that feel natural and meaningful. Every shoot is an opportunity to grow and connect, so let’s get in touch!
+
+              </p>
     </section>
   );
 }

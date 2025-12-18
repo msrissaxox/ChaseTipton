@@ -15,20 +15,21 @@ const ptSerif = PT_Serif({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://chasetiptonphotography.com"), // Update with your actual domain
+  metadataBase: new URL("https://chasetakephoto.com"), // Update with your actual domain
   title: {
     default: "Chase Tipton Photography | Professional Photographer Portfolio",
     template: "%s | Chase Tipton Photography",
   },
   description:
-    "Award-winning professional photography by Chase Tipton. Specializing in portrait, landscape, and wedding photography. View portfolio and book your session today.",
+    "Professional photography by Chase Tipton. Specializing in Live Music, Event Photography and Personal/Family Portraits View portfolio and book your session today.",
   keywords: [
     "Chase Tipton",
     "Professional Photographer",
     "Photography Portfolio",
     "Portrait Photography",
-    "Landscape Photography",
-    "Wedding Photography",
+    "Family Portrait Photography",
+    "Event Photography",
+    "Live Music Photography",
     "California Photographer",
     "Professional Photography Services",
   ],
@@ -43,8 +44,8 @@ export const metadata = {
   openGraph: {
     title: "Chase Tipton Photography | Professional Photographer Portfolio",
     description:
-      "Award-winning professional photography by Chase Tipton. Specializing in portrait, landscape, and wedding photography.",
-    url: "https://chasetiptonphotography.com",
+      "Award-winning professional photography by Chase Tipton. Specializing in portrait, event, and live music photography.",
+    url: "https://www.chasetakephoto.com",
     siteName: "Chase Tipton Photography",
     images: [
       {
@@ -56,14 +57,6 @@ export const metadata = {
     ],
     locale: "en_US",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Chase Tipton Photography | Professional Photographer Portfolio",
-    description:
-      "Award-winning professional photography by Chase Tipton. View portfolio and book your session.",
-    images: ["/og-image.jpg"],
-    creator: "@chasetiptonphoto", // Update with actual Twitter handle
   },
   robots: {
     index: true,
@@ -95,7 +88,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://chasetiptonphotography.com" />
+        <link rel="canonical" href="https://www.chasetakephoto.com" />
       </head>
       <body className={`${montserrat.variable} ${ptSerif.variable} antialiased`}>{children}</body>
     </html>

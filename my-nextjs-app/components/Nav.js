@@ -54,7 +54,7 @@ export default function Nav() {
                 href="https://flickr.com/photos/203808147@N05/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-serif text-lg text-[#bfbab0] hover:underline"
+                className="font-serif text-lg text-[#bfbab0]"
                 aria-label="View more photography by Chase Tipton on Flickr"
                 title="View Chase Tipton's photography portfolio on Flickr"
               >
@@ -83,7 +83,7 @@ export default function Nav() {
                 href="https://flickr.com/photos/203808147@N05/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-serif text-lg text-[#bfbab0] hover:underline block"
+                className="font-serif text-lg text-[#bfbab0] block"
                 onClick={() => setIsMenuOpen(false)}
                 aria-label="View more photography by Chase Tipton on Flickr"
                 title="View Chase Tipton's photography portfolio on Flickr"

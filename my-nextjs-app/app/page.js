@@ -14,13 +14,13 @@ export default function Home() {
     "@type": "Person",
     name: "Chase Tipton",
     jobTitle: "Professional Photographer",
-    url: "https://chasetiptonphotography.com",
+    url: "https://www.chasetakephoto.com",
+    email: "chasetakephoto@gmail.com",
+    sameAs: ["https://www.instagram.com/crdt24"],
     // Add these fields ONLY when you have real data:
-    // "telephone": "+1-555-123-4567",
-    // "email": "contact@chasetiptonphotography.com",
-    // "image": "https://chasetiptonphotography.com/chase-tipton-photo.jpg",
-    // "address": { "@type": "PostalAddress", "addressLocality": "Los Angeles", "addressRegion": "CA", "addressCountry": "US" },
-    // "sameAs": ["https://instagram.com/your-real-handle", "https://facebook.com/your-real-page"]
+    // telephone: "+1-555-123-4567",
+    // image: "https://chasetiptonphotography.com/chase-tipton-photo.jpg",
+    // address: { "@type": "PostalAddress", "addressLocality": "Los Angeles", "addressRegion": "CA", "addressCountry": "US" },
   };
 
   return (
