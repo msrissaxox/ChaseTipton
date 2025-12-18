@@ -1,39 +1,34 @@
 "use client";
 
 export default function LogosMarquee() {
-  // Placeholder logos - replace with actual client/venue logos
-  const logos = [
-    "CLIENT 1",
-    "VENUE 2",
-    "BRAND 3",
-    "EVENT 4",
-    "CLIENT 5",
-    "VENUE 6",
-    "BRAND 7",
-    "EVENT 8",
+  const specializations = [
+    "LIVE MUSIC",
+    "EVENT PHOTOGRAPHY",
+    "PERSONAL PORTRAITS",
+    "FAMILY PORTRAITS",
   ];
 
   return (
     <div className="w-full overflow-hidden bg-[#1d1c1c] py-6 border-y border-[#bfbab0]/20">
-      <div className="text-center text-[#bfbab0] text-sm tracking-widest mb-4">AS SEEN AT</div>
+      <div className="text-center text-[#bfbab0] text-sm tracking-widest mb-4">SPECIALIZES IN</div>
       <div className="flex whitespace-nowrap animate-logos-marquee">
         <div className="flex items-center gap-24">
-          {logos.map((logo, index) => (
+          {specializations.map((specialization, index) => (
             <div
-              key={`logo-1-${index}`}
+              key={`spec-1-${index}`}
               className="text-[#bfbab0] font-bold text-xl tracking-wide px-6 py-3 border border-[#bfbab0]/30 rounded"
             >
-              {logo}
+              {specialization}
             </div>
           ))}
         </div>
         <div className="flex items-center gap-24 pl-24">
-          {logos.map((logo, index) => (
+          {specializations.map((specialization, index) => (
             <div
-              key={`logo-2-${index}`}
+              key={`spec-2-${index}`}
               className="text-[#bfbab0] font-bold text-xl tracking-wide px-6 py-3 border border-[#bfbab0]/30 rounded"
             >
-              {logo}
+              {specialization}
             </div>
           ))}
         </div>
