@@ -18,16 +18,16 @@ export default function LogosMarquee() {
       <div className="text-center text-[#bfbab0] text-sm tracking-widest mb-4">SPECIALIZES IN</div>
       <div className="relative flex overflow-hidden">
         <div className="flex animate-logos-marquee pl-4">
-          <span className="text-[#bfbab0] font-bold text-sm md:text-xl tracking-wide whitespace-nowrap">
+          <span className="text-[#bfbab0] font-bold text-base md:text-2xl tracking-wide whitespace-nowrap">
             {marqueeText}{separator}
           </span>
-          <span className="text-[#bfbab0] font-bold text-sm md:text-xl tracking-wide whitespace-nowrap">
+          <span className="text-[#bfbab0] font-bold text-base md:text-2xl tracking-wide whitespace-nowrap">
             {marqueeText}{separator}
           </span>
-          <span className="text-[#bfbab0] font-bold text-sm md:text-xl tracking-wide whitespace-nowrap">
+          <span className="text-[#bfbab0] font-bold text-base md:text-2xl tracking-wide whitespace-nowrap">
             {marqueeText}{separator}
           </span>
-          <span className="text-[#bfbab0] font-bold text-sm md:text-xl tracking-wide whitespace-nowrap">
+          <span className="text-[#bfbab0] font-bold text-base md:text-2xl tracking-wide whitespace-nowrap">
             {marqueeText}{separator}
           </span>
         </div>
