@@ -20,7 +20,7 @@ export default function Home() {
     // Add these fields ONLY when you have real data:
     // telephone: "+1-555-123-4567",
     // image: "https://chasetiptonphotography.com/chase-tipton-photo.jpg",
-    // address: { "@type": "PostalAddress", "addressLocality": "Los Angeles", "addressRegion": "CA", "addressCountry": "US" },
+   address: { "@type": "PostalAddress", "addressLocality": "Los Angeles", "addressRegion": "CA", "addressCountry": "US" },
   };
 
   return (
