@@ -14,7 +14,7 @@ export default function Home() {
     "@type": "Person",
     name: "Chase Tipton",
     jobTitle: "Professional Photographer",
-    url: "https://www.chasetakephoto.com",
+    url: "https://chasetakephoto.com",
     email: "chasetakephoto@gmail.com",
     sameAs: ["https://www.instagram.com/crdt24"],
     // Add these fields ONLY when you have real data:

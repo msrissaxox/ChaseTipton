@@ -55,7 +55,7 @@ export const metadata = {
     title: "Chase Tipton Photography | Professional Photographer Portfolio",
     description:
       "Award-winning professional photography by Chase Tipton. Specializing in portrait, event, and live music photography.",
-    url: "https://www.chasetakephoto.com",
+    url: "https://chasetakephoto.com",
     siteName: "Chase Tipton Photography",
     images: [
       {
@@ -98,7 +98,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://www.chasetakephoto.com" />
+        <link rel="canonical" href="https://chasetakephoto.com" />
       </head>
       <body className={`${montserrat.variable} ${ptSerif.variable} antialiased`}>{children}</body>
     </html>
