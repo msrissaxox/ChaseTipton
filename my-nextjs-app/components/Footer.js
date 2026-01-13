@@ -64,11 +64,11 @@ export default function Footer() {
         </a>
         <div className="text-sm md:text-base">
           <a
-            href="https://www.instagram.com/rissa_codes"
+            href="https://www.instagram.com/mielcreatif"
             target="_blank"
             rel="noopener noreferrer"
           >
-            site by @rissa_codes
+            site by @mielcreatif
           </a>
         </div>
       </div>
